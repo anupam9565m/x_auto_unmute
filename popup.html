@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>X Auto Unmute</title>
+  <style>
+    body {
+      width: 280px;
+      margin: 0;
+      padding: 16px;
+      font: 14px/1.45 system-ui, -apple-system, Segoe UI, sans-serif;
+      color: #17202a;
+      background: #fff;
+    }
+    h1 { font-size: 17px; margin: 0 0 12px; }
+    label { display: flex; gap: 10px; align-items: flex-start; margin: 14px 0; }
+    input { margin-top: 3px; }
+    .hint { color: #536471; font-size: 12px; margin-top: 12px; }
+    .status { padding: 8px; border-radius: 8px; background: #f2f4f7; }
+  </style>
+</head>
+<body>
+  <h1>X Auto Unmute</h1>
+  <div class="status" id="status">Loading settings…</div>
+
+  <label>
+    <input type="checkbox" id="enabled">
+    <span><strong>Enable auto-unmute</strong><br>Try to unmute visible videos while browsing X.</span>
+  </label>
+
+  <label>
+    <input type="checkbox" id="siteButton">
+    <span><strong>Use X's unmute button</strong><br>Fallback when changing the video element does not work.</span>
+  </label>
+
+  <p class="hint">
+    Browser autoplay policies may still require a user gesture. X can change its interface, so this extension cannot guarantee every video will unmute.
+  </p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
